@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOCÊ PODE SER A PRÓXIMA VÍTIMA</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:black;
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+h1{
+    color:red;
+    font-size:2.2em;
+    margin-top:40px;
+    animation:pulse 1s infinite alternate;
+}
+
+@keyframes pulse{
+    from{opacity:0.6;}
+    to{opacity:1;}
+}
+
+.contador{
+    font-size:3em;
+    color:#ff0000;
+    margin:20px 0;
+}
+
+.alerta{
+    background:#111;
+    border-left:5px solid red;
+    padding:15px;
+    max-width:800px;
+    margin:20px auto;
+    font-size:0.9em;
+}
+
+button{
+    padding:15px 25px;
+    font-size:18px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#cc0000;
+}
+
+.section{
+    margin-top:60px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    border:1px solid #333;
+}
+
+footer{
+    margin-top:50px;
+    padding:20px;
+    font-size:0.8em;
+    opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚠️ A CADA SEGUNDO ALGUÉM CAI EM UM GOLPE</h1>
+
+<div class="contador" id="contador">0</div>
+
+<p>pessoas já podem ter sido enganadas enquanto você lê isso.</p>
+
+<div class="alerta">
+Esta é uma página educativa de conscientização digital.  
+Nenhum dado é coletado aqui. O contador é ilustrativo para demonstrar a velocidade dos golpes.
+</div>
+
+<button onclick="document.getElementById('conteudo').scrollIntoView({behavior:'smooth'})">
+EU NÃO QUERO SER O PRÓXIMO
+</button>
+
+<div id="conteudo" class="section">
+
+<div class="card">
+<h2>📲 Clonagem de WhatsApp</h2>
+<p>Eles fingem ser você. Pedem dinheiro para sua família. Em minutos.</p>
+<ul>
+<li>Ative verificação em duas etapas</li>
+<li>Nunca compartilhe código SMS</li>
+<li>Desconfie de urgência</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>💳 Falsa Central Bancária</h2>
+<p>Ligação assustadora. Compra suspeita. Pressão psicológica.</p>
+<ul>
+<li>Bancos NÃO pedem senha</li>
+<li>Desligue e ligue no número oficial</li>
+<li>Nunca instale apps indicados por telefone</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🎁 Golpe do Prêmio Falso</h2>
+<p>Você “ganhou”. Só precisa pagar uma taxa.</p>
+<ul>
+<li>Prêmio não exige pagamento antecipado</li>
+<li>Pesquise a empresa</li>
+<li>Não clique em links suspeitos</li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+Projeto independente de conscientização digital. Não representamos bancos ou instituições oficiais.
+</footer>
+
+<script>
+let contador = 18437; // número inicial impactante
+setInterval(() => {
+    contador += Math.floor(Math.random() * 3) + 1;
+    document.getElementById("contador").innerText = contador.toLocaleString('pt-BR');
+}, 1500);
+</script>
+
+</body>
+</html>
